@@ -1,0 +1,44 @@
+@import "../settings/mixins";
+
+.rover-info {
+  @include flex-column;
+  @include back-link;
+
+  align-items: center;
+  background-color: $nasaColor;
+  color: $whiteColor;
+  height: 30vh;
+  justify-content: space-between;
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  .info {
+    width: 40vw;
+    height: 25vh;
+    @include flex-row;
+    background-color: $nasaColor;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+
+    img {
+      @include white-border;
+      height: 20vh;
+    }
+
+    .get-rover-info {
+      height: 20vh;
+      @include flex-column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

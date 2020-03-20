@@ -1,0 +1,58 @@
+@import '../settings/mixins';
+
+.content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    display: block;
+    background-color: rgba($color: white, $alpha: 0.5);
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .site_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  .mars,
+  .apod {
+    @include flex-row;
+    @include flex-center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 15vh;
+    filter: brightness(50%);
+    transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1);
+    color: $bgColor;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    &:hover {
+      filter: brightness(100%);
+      cursor: pointer;
+      height: 60vh;
+      color: $nasaColor;
+      font-size: 5rem;
+    }
+  }
+
+  .apod {
+    background-image: url("../images/apod.jpg");
+  }
+
+  .mars {
+    background-image: url("../images/mars.jpg");
+  }
+}

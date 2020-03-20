@@ -1,0 +1,25 @@
+apod:
+
+1 click for hd image (moze tooltip? after??)
+3 media_type video do ostylowania (width itd)
+
+optional:
+- react calendar otwieranie z zaznaczona ostatnio wybrana data a nie dzisiejsza
+
+mars:
+interesting:
+choose rover z liniami na 3 rovery (border? line?)
+CHANGE ROVER zrobiæ button i powrót do chooserover
+!!- po zaladowaniu zdjec powrot do gory
+
+kurwa_mac
+rozwiniecie kamer - wyjasnienie
+w photosach jakies info/ ostylowanie
+getphotos oddzielny component z lem
+
+
+optional:
+podzial na 25 zdjec
+
+
+apods_interesting: 2019-10-10

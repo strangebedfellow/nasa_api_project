@@ -1,0 +1,30 @@
+.header {
+  @include back-link;
+
+  width: 100vw;
+  height: 30vh;
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 30px solid $whiteColor;
+
+  img {
+    height: 15vh;
+  }
+
+  h1 {
+    color: $bgColor;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    // padding-bottom: 30px;
+  }
+}
+
+.mars-header {
+  // background-image: url("../images/mars.jpg");
+  // background-size: cover;
+  //   background-repeat: no-repeat;
+}

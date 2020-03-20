@@ -1,0 +1,48 @@
+@import "../settings/mixins";
+
+.choose-rover-title {
+  @include flex-row;
+  @include flex-center;
+  height: 10vh;
+  //border-bottom: 1px solid $whiteColor;
+  background-color: $nasaColor;
+
+  h1 {
+    color: $whiteColor;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.choose-rover {
+  
+  a {
+    text-decoration: none;
+    @include flex-column;
+  }
+
+  img {
+    @include white-border;
+    width: 100%;
+    transition: filter 200ms ease;
+
+    &:hover {
+      filter: brightness(75%);
+    }
+  }
+
+  .rovers {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $nasaColor;
+    height: 60vh;
+    width: 100vw;
+  }
+
+  .rover {
+    width: 30vw;
+    @include flex-column;
+  }
+}

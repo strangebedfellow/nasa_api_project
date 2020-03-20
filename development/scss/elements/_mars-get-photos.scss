@@ -1,0 +1,31 @@
+@import "../settings/mixins";
+
+.get-photos {
+  width: 100vw;
+  @include flex-column;
+  align-items: center;
+  background-color: $bgColor;
+  padding: 20px;
+  border-top: 1px solid $whiteColor;
+
+  img {
+    max-width: 80vw;
+  }
+
+  p {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: $nasaColor;
+    border-top: 1px solid $whiteColor;
+  }
+
+  ul {
+    li {
+      @include flex-column;
+      @include white-border;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.apod-title {
+  width: 100vw;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+
+  .title,
+  .explanation-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    background-color: $nasaColor;
+    color: white;
+    padding: 10px 0 10px 0;
+    border: 2px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .title {
+    margin-right: 5px;
+  }
+
+  .explanation-title {
+    margin-left: 5px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+   // font-weight: bold;
+  }
+}
+
+//przenieś nad apod-media (bgcolor = nasacolor) zostaw red linie poziomą oddzielajaca date component
