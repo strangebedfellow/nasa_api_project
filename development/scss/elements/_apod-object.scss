@@ -9,7 +9,7 @@
     padding: 0 0px 0 0px;
     margin-left: 5px;
     font-size: 1.2rem;
-    color: white;
+    color: $whiteColor;
   }
 
   .media {
@@ -40,12 +40,6 @@
 
     img {
       width: 100%;
-      
-    }
-
-    object {
-      width: 100%;
-
     }
   }
 }

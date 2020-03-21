@@ -1,43 +1,47 @@
 import React, { Component } from "react";
-import MyCalendar from './calendar'
+import Calendar from 'react-calendar';
+
+import SmoothCollapse from '../../../node_modules/react-smooth-collapse/js/index';
 
 export default class DateComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             changeDate: false,
-            openCalendar: false
         }
     }
 
     changeDate = () => {
         this.setState(prevState => ({
-            changeDate: !prevState.changeDate,
-            openCalendar: !prevState.openCalendar
+            changeDate: !prevState.changeDate
         }))
+    }
+
+    onChange = date => {
+        this.props.setNewDate(date);
     }
 
     render() {
 
-        const { changeDate, openCalendar } = this.state;
+        const { changeDate } = this.state;
         const { date, setNewDate } = this.props;
-   
-        const buttonText = openCalendar ? 'Close' : 'Change date';
+        const buttonText = changeDate ? 'Close' : 'Change date';
+        const splitted = date.split('-');
+        const acceptable = new Date(splitted[0], splitted[1] - 1, splitted[2]);
 
         return <>
             <section className='apod-date'>
                 <div className='site_container'>
                     <p>Current date:</p>
                     <p>{date}</p>
-                    <button className = 'calendar-btn' onClick={this.changeDate}>{buttonText}</button>
-                    {changeDate ? <MyCalendar setNewDate={setNewDate} /> : null}
-                    {/* {zmienic na &&} */}
+                    <button className='calendar-btn' onClick={this.changeDate}>{buttonText}</button>
+                    <SmoothCollapse expanded={changeDate}>
+                        {changeDate && <Calendar onChange={this.onChange} value={acceptable} />}
+                    </SmoothCollapse>
+                    {/* {changeDate && <MyCalendar setNewDate={setNewDate} date={date} />} */}
                 </div>
             </section>
         </>
-
-
-
     }
 }
 

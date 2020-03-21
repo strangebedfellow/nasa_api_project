@@ -21,7 +21,7 @@
     background-color: $nasaColor;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $whiteColor;
 
     img {
       @include white-border;
@@ -38,6 +38,10 @@
         font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
+      }
+
+      p {
+        font-weight: bold;
       }
     }
   }

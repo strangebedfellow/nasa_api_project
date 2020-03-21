@@ -15,8 +15,6 @@ import ChooseRover from './explore-mars/chooseRover';
 import RoversHeader from './explore-mars/roversHeader';
 import TextAnimation from './textAnimation';
 
-
-
 class MarsLandingPage extends Component {
     render() {
         return <>

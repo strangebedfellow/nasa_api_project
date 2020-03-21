@@ -6,6 +6,7 @@
 
   .title,
   .explanation-title {
+    @include white-border;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +14,6 @@
     background-color: $nasaColor;
     color: white;
     padding: 10px 0 10px 0;
-    border: 2px solid white;
     text-transform: uppercase;
     font-weight: bold;
   }

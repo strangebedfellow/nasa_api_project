@@ -56,8 +56,8 @@ export default class Apod extends Component {
         clearTimeout(this.timeoutId);
     }
 
-    refreshPage = () => { 
-        window.location.reload(); 
+    refreshPage = () => {
+        window.location.reload();
     }
 
     render() {
@@ -65,13 +65,15 @@ export default class Apod extends Component {
         const { apod, respOk } = this.state;
         const today = new Date();
 
+        console.log(today);
+
         if (!respOk) {
             return <>
                 <div className='loading-data'>
                     <i class="far fa-frown"></i>
                     <h1>No data available for this date</h1>
                     <h2>{`Please choose another date between 1995-06-16 & ${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`}</h2>
-                    <button onClick={ this.refreshPage }>Go back</button>
+                    <button onClick={this.refreshPage}>Go back</button>
                 </div>
             </>
         }
@@ -80,7 +82,8 @@ export default class Apod extends Component {
             return <>
                 <div className='loading-data'>
                     <h1>Loading data...</h1>
-                    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div className="lds-roller">
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
             </>
         }

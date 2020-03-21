@@ -47,12 +47,12 @@ module.exports = {
     //   template: path.resolve(__dirname, "./development/index.html"),
 
     // })
-    // new CopyPlugin([
-    //   {
-    //     from: 'development/images',
-    //     to: 'images',
-    //   }
-    // ])
+    new CopyPlugin([
+      {
+        from: 'development/index.html',
+        to: 'index.html',
+      }
+    ])
   ],
   devtool: 'cheap-module-eval-source-map'
 };

@@ -2,19 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   .bracket {
     //position: relative;
     animation: mymove 1s ease;
     color: $whiteColor;
-    font-size: 5rem;
+    font-size: 15rem;
     animation-fill-mode: forwards;
     font-family: Arial;
+    background-color: white;
   }
 
   .central {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     width: 0;
@@ -23,6 +24,7 @@
     animation-fill-mode: forwards;
     color: $bgColor;
     font-size: 5rem;
+    
 
     p {
       color: $bgColor;
@@ -34,14 +36,14 @@
       font-weight: bold;
       text-transform: uppercase;
 
-    &:first-child {
-      font-family: Arial;
-      background-color: $nasaColor;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      font-family: Arial;
-    }
+      &:first-child {
+        font-family: Arial;
+        background-color: $nasaColor;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-family: Arial;
+      }
     }
     span {
       font-size: 5rem;

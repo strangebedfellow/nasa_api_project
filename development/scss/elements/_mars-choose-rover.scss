@@ -4,7 +4,6 @@
   @include flex-row;
   @include flex-center;
   height: 10vh;
-  //border-bottom: 1px solid $whiteColor;
   background-color: $nasaColor;
 
   h1 {
@@ -16,7 +15,6 @@
 }
 
 .choose-rover {
-  
   a {
     text-decoration: none;
     @include flex-column;
