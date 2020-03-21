@@ -1,0 +1,101 @@
+.landing-animation {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 40vw;
+
+  .text1,
+  .text2 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .text1 {
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 600ms;
+    background-color: $nasaColor;
+    padding: 1rem;
+    border-radius: 10px;
+
+    span {
+      font-family: Arial;
+      &:first-of-type {
+        color: $whiteColor;
+      }
+
+      &:last-of-type {
+        color: #ff0000;
+      }
+    }
+  }
+
+  .text2 {
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 1000ms;
+  }
+
+  hr {
+    width: 0;
+    opacity: 0;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, $nasaColor 50%, rgba(255, 255, 255, 1) 100%);
+    border: 0;
+    animation: hrline 500ms linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes hrline {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-40vh);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 50%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(40vh);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 50%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,7 +1,9 @@
 @import 'generic/reset';
 
+
 @import 'settings/colors';
 @import 'settings/fonts';
+@import './settings/mixins';
 
 @import 'elements/base';
 @import 'elements/tooltip';
@@ -9,11 +11,13 @@
 
 @import 'elements/content';
 @import 'elements/text-animation';
+@import 'elements/landing-animation';
 
 @import 'elements/mars-choose-rover';
 @import 'elements/mars-choose-cam';
 @import 'elements/mars-rover-info';
 @import 'elements/mars-get-photos';
+
 
 @import 'elements/apod';
 @import 'elements/header';

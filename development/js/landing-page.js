@@ -14,6 +14,7 @@ import ExploreRover from './explore-mars/exploreRover';
 import ChooseRover from './explore-mars/chooseRover';
 import RoversHeader from './explore-mars/roversHeader';
 import TextAnimation from './textAnimation';
+import LandingAnimation from './landingAnimation';
 
 class MarsLandingPage extends Component {
     render() {
@@ -43,7 +44,8 @@ class Navigation extends Component {
                         <h1>astronomy picture of the day</h1>
                     </div>
                 </Link>
-                <TextAnimation />
+                {/* <TextAnimation /> */}
+                <LandingAnimation />
                 <Link to="/mars">
                     <div className="mars">
                         <h1>explore mars</h1>
