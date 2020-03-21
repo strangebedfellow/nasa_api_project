@@ -7,7 +7,7 @@
     //position: relative;
     animation: mymove 1s ease;
     color: $whiteColor;
-    font-size: 10rem;
+    font-size: 5rem;
     animation-fill-mode: forwards;
     font-family: Arial;
   }
@@ -44,7 +44,7 @@
     }
     }
     span {
-      font-size: 10rem;
+      font-size: 5rem;
       &:first-child {
         color: $whiteColor;
       }

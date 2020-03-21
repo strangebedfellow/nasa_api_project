@@ -1,3 +1,8 @@
+!!!!
+
+w getPhotos fetch zwraca kamery i full opis -zfetchowac to do choosecam i wyswietlic kamery
+
+
 apod:
 
 1 click for hd image (moze tooltip? after??)
@@ -12,7 +17,7 @@ choose rover z liniami na 3 rovery (border? line?)
 CHANGE ROVER zrobiæ button i powrót do chooserover
 !!- po zaladowaniu zdjec powrot do gory
 
-kurwa_mac
+
 rozwiniecie kamer - wyjasnienie
 w photosach jakies info/ ostylowanie
 getphotos oddzielny component z lem

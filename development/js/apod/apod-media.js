@@ -19,6 +19,7 @@ export default class ApodMedia extends Component {
             </a>
             </>
             : mediaType = <iframe width="800" height="600" src={url} allowfullscreen="allowfullscreen" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+// zmienic mediatype raz tak samo jak w apod date albo na ifa
 
         return <>
                 <div className='media'>

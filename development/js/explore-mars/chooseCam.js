@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import GetSols from './getSols'
+import GetSols from './getSols';
+import GetRoverInfo from './getRoverInfo';
 
 const getCams = {
     cams: ['FHAZ', 'NAVCAM', 'PANCAM', 'MINITES', 'ENTRY', 'RHAZ'],
@@ -36,8 +37,7 @@ export default class ChooseCam extends Component {
         const { cameras, chosenCam, camChange } = this.state;
         const {rover} = this.props;
 
-        let fullName;
-        {rover == 'curiosity' ? fullName = getCams.curiosityCamsFull : fullName = getCams.camsFull}     
+        const fullName = (rover == 'curiosity') ? getCams.curiosityCamsFull : getCams.camsFull;
 
         return <>
             <section className='choose-cam'>

@@ -13,34 +13,9 @@ import ApodHeader from './apod/apod-header';
 import ExploreRover from './explore-mars/exploreRover';
 import ChooseRover from './explore-mars/chooseRover';
 import RoversHeader from './explore-mars/roversHeader';
+import TextAnimation from './textAnimation';
 
-class TextAnimation extends Component {
-    state = {
-        delay: false
-    }
 
-    componentDidMount() {
-        this.intervalId = setTimeout(() => {
-            this.setState({ delay: true });
-        }, 1000);
-    }
-
-    render() {
-        if (this.state.delay) {
-            return <>
-                <div className='text-animation'>
-                    <h1 className='bracket'>{'<>'}</h1>
-                    <div className='central'>
-                        <p><span>NASA</span><span> API</span></p>
-                        <p>CL_project by Mirosław Pajor</p>
-                    </div>
-                    <h1 className='bracket'>{'</>'}</h1>
-                </div>
-            </>
-        }
-        return null
-    }
-}
 
 class MarsLandingPage extends Component {
     render() {

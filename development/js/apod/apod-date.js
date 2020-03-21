@@ -21,9 +21,8 @@ export default class DateComponent extends Component {
 
         const { changeDate, openCalendar } = this.state;
         const { date, setNewDate } = this.props;
-        let buttonText;
-
-        !openCalendar ? buttonText = 'Change date' : buttonText = 'Close';
+   
+        const buttonText = openCalendar ? 'Close' : 'Change date';
 
         return <>
             <section className='apod-date'>
@@ -32,8 +31,8 @@ export default class DateComponent extends Component {
                     <p>{date}</p>
                     <button className = 'calendar-btn' onClick={this.changeDate}>{buttonText}</button>
                     {changeDate ? <MyCalendar setNewDate={setNewDate} /> : null}
+                    {/* {zmienic na &&} */}
                 </div>
-
             </section>
         </>
 
