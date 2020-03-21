@@ -9,10 +9,9 @@ optional:
 mars:
 interesting:
 choose rover z liniami na 3 rovery (border? line?)
-CHANGE ROVER zrobiæ button i powrót do chooserover
+CHANGE ROVER zrobiÄ‡ button i powrÃ³t do chooserover
 !!- po zaladowaniu zdjec powrot do gory
 
-kurwa_mac
 rozwiniecie kamer - wyjasnienie
 w photosach jakies info/ ostylowanie
 getphotos oddzielny component z lem
