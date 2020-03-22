@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import {
-    Link,
-} from 'react-router-dom';
 
 import ApodMedia from './apod-media';
 import ApodExplanation from './apod-explanation';
@@ -34,7 +31,6 @@ export default class Apod extends Component {
                 this.setState({ apod: resp });
             }
             );
-
     }
 
     componentDidMount() {
@@ -64,8 +60,6 @@ export default class Apod extends Component {
 
         const { apod, respOk } = this.state;
         const today = new Date();
-
-        console.log(today);
 
         if (!respOk) {
             return <>

@@ -41,7 +41,7 @@ export default class ChooseCam extends Component {
 
         return <>
             <section className='choose-cam'>
-                {/* <h1>{`${rover}'s Cameras`}</h1> */}
+                <h1>{`${rover}'s Cameras`}</h1>
                 <ul className='cameras'>
                     {cameras.map((e, index) => <li key={index} value={e} ><span>{e}</span>: {fullName[index]}</li>)}
                 </ul>

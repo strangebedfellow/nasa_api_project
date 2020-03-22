@@ -8,12 +8,11 @@ import {
 } from 'react-router-dom';
 
 import '../scss/main.scss';
-import App from './apod/app';
+import Apod from './apod/apod';
 import ApodHeader from './apod/apod-header';
 import ExploreRover from './explore-mars/exploreRover';
 import ChooseRover from './explore-mars/chooseRover';
 import RoversHeader from './explore-mars/roversHeader';
-import TextAnimation from './textAnimation';
 import LandingAnimation from './landingAnimation';
 
 class MarsLandingPage extends Component {
@@ -30,7 +29,7 @@ class ApodLandingPage extends Component {
     render() {
         return <>
             <ApodHeader />
-            <App />
+            <Apod />
         </>
     }
 }
@@ -44,7 +43,6 @@ class Navigation extends Component {
                         <h1>astronomy picture of the day</h1>
                     </div>
                 </Link>
-                {/* <TextAnimation /> */}
                 <LandingAnimation />
                 <Link to="/mars">
                     <div className="mars">

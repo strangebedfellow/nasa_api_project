@@ -27,14 +27,13 @@ export default class GetPhotos extends Component {
     }
 
     render() {
-        
-        const { photos } = this.state; 
-        console.log(photos);      
+
+        const { photos } = this.state;
 
         if (!photos) {
             return <>
                 <h1>Loading photos...</h1>
-                <br/>
+                <br />
             </>
         }
 

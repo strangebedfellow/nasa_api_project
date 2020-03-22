@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Calendar from 'react-calendar';
-
 import SmoothCollapse from '../../../node_modules/react-smooth-collapse/js/index';
 
 export default class DateComponent extends Component {
@@ -24,7 +23,7 @@ export default class DateComponent extends Component {
     render() {
 
         const { changeDate } = this.state;
-        const { date, setNewDate } = this.props;
+        const { date } = this.props;
         const buttonText = changeDate ? 'Close' : 'Change date';
         const splitted = date.split('-');
         const acceptable = new Date(splitted[0], splitted[1] - 1, splitted[2]);
@@ -37,8 +36,8 @@ export default class DateComponent extends Component {
                     <button className='calendar-btn' onClick={this.changeDate}>{buttonText}</button>
                     <SmoothCollapse expanded={changeDate}>
                         {changeDate && <Calendar onChange={this.onChange} value={acceptable} />}
-                    </SmoothCollapse>
-                    {/* {changeDate && <MyCalendar setNewDate={setNewDate} date={date} />} */}
+                    </SmoothCollapse> 
+                    <p></p>
                 </div>
             </section>
         </>

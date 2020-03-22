@@ -3,14 +3,13 @@
 
 @import 'settings/colors';
 @import 'settings/fonts';
-@import './settings/mixins';
+@import 'settings/mixins';
 
 @import 'elements/base';
 @import 'elements/tooltip';
 @import 'elements/backToTop';
 
 @import 'elements/content';
-@import 'elements/text-animation';
 @import 'elements/landing-animation';
 
 @import 'elements/mars-choose-rover';

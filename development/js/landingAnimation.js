@@ -19,12 +19,10 @@ export default class LandingAnimation extends Component {
                         <span>NASA </span>
                         <span>API</span>
                     </div>
-                
                     <hr></hr>
                     <div className='text2'>
-                    CL_project by Mirosław Pajor
+                        CL_project by Mirosław Pajor
                     </div>
-
                 </div>
             </>
         }

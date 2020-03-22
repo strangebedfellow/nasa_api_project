@@ -3,22 +3,24 @@
   justify-content: center;
   align-items: center;
   height: 30vh;
-  width: 40vw;
+  width: 70vw;
 
   .text1,
   .text2 {
     text-align: center;
-    color: black;
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
   }
 
   .text1 {
-    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation-delay: 600ms;
+    animation: slide-in-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.8s;
     background-color: $nasaColor;
     padding: 1rem;
     border-radius: 10px;
+    font-size: 5rem;
+    @include white-border;
 
     span {
       font-family: Arial;
@@ -33,19 +35,21 @@
   }
 
   .text2 {
-    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation-delay: 1000ms;
+    color: $whiteColor;
+    animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 1.1s;
   }
 
   hr {
     width: 0;
     opacity: 0;
     height: 3px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, $nasaColor 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(90deg, $bgColor 0%, $whiteColor 50%, $bgColor 100%);
     border: 0;
     animation: hrline 500ms linear;
     animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    margin: 1rem;
   }
 }
 
@@ -66,7 +70,7 @@
 
 @keyframes slide-in-top {
   0% {
-    transform: translateY(-40vh);
+    transform: translateY(-30vh);
     opacity: 0;
   }
 
@@ -84,7 +88,7 @@
 
 @keyframes slide-in-bottom {
   0% {
-    transform: translateY(40vh);
+    transform: translateY(30vh);
     opacity: 0;
   }
 

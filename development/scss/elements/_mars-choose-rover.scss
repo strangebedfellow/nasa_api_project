@@ -1,23 +1,12 @@
 @import "../settings/mixins";
 
-.choose-rover-title {
-  @include flex-row;
-  @include flex-center;
-  height: 10vh;
-  background-color: $nasaColor;
-
-  h1 {
-    color: $whiteColor;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-}
-
 .choose-rover {
+  height: 70vh;
+
   a {
     text-decoration: none;
     @include flex-column;
+    //justify-content: space-between;
   }
 
   img {
@@ -27,6 +16,24 @@
 
     &:hover {
       filter: brightness(75%);
+    }
+  }
+
+  .choose-rover-title {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: $nasaColor;
+
+    h1 {
+      padding: 1rem;
+      color: $whiteColor;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
     }
   }
 
