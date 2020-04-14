@@ -37,3 +37,25 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 700px) {
+  // html {
+  //   font-size: 8px;
+  // }
+
+  .header {
+    h1 {
+      font-size: initial;
+    }
+  }
+
+  .apod-header {
+  background-size: cover;
+
+
+  }
+
+  .apod-title {
+    flex-direction: column;
+  }
+}

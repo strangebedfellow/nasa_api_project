@@ -21,7 +21,7 @@ export default class LandingAnimation extends Component {
                     </div>
                     <hr></hr>
                     <div className='text2'>
-                        CL_project by Mirosław Pajor
+                        by Mirosław Pajor
                     </div>
                 </div>
             </>

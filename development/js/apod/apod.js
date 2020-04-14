@@ -12,7 +12,7 @@ export default class Apod extends Component {
             apod: false,
             date: new Date(),
             respOk: true,
-            timeout: 1000
+            timeout: 500
         }
     }
 

@@ -43,3 +43,16 @@
     }
   }
 }
+
+
+@media (max-width: 700px) {
+  .apod-object {
+    flex-direction: column;
+    
+    .media, .explanation {
+      width: 100vw;
+      font-size: 0.8rem;
+      line-height: initial;
+    }
+  }
+}
