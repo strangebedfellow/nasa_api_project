@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ScrollUpButton from "react-scroll-up-button";
 
 export default class GetPhotos extends Component {
     constructor(props) {
@@ -40,6 +41,7 @@ export default class GetPhotos extends Component {
         else {
             return <>
                 <section className='get-photos'>
+                    <ScrollUpButton />
                     <ul>
                         {photos.map((e, index) => <>
                             <li key={e.id}>

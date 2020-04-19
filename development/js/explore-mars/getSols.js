@@ -34,7 +34,6 @@ export default class GetSols extends Component {
     handleChange = (e) => this.setState({ sol: e.target.value });
 
     render() {
-
         const { sol, sols } = this.state;
         const { cam, rover } = this.props;
 
