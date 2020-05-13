@@ -20,9 +20,9 @@ export default class LandingAnimation extends Component {
                         <span>API</span>
                     </div>
                     <hr></hr>
-                    <div className='text2'>
+                    {/* <div className='text2'>
                         by Mirosław Pajor
-                    </div>
+                    </div> */}
                 </div>
             </>
         }
