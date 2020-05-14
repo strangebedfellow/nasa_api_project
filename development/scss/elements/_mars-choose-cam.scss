@@ -47,3 +47,28 @@
     margin-bottom: 1rem;
   }
 }
+
+@media (max-width: 700px) {
+  .choose-cam {
+
+    h1 {
+      padding-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .cameras {
+      
+      width: 90%;
+      font-size: 0.8rem;
+
+      li {
+        text-align: center;
+      }
+
+    }
+
+    select {
+      width: 90%;
+      font-size: 1rem;
+    }
+  }
+}

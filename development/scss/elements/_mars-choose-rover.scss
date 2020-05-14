@@ -51,3 +51,28 @@
     @include flex-column;
   }
 }
+
+@media (max-width: 700px) {
+
+  .choose-rover {
+    .choose-rover-title {
+      h1 {
+        font-size: initial;
+      }
+    }
+
+    .rovers {
+      height: auto;
+    @include flex-column;
+
+    .rover {
+      width: 80%;
+      padding: 1rem 0 1rem 0;
+    }
+
+    }
+
+
+  }
+
+}
