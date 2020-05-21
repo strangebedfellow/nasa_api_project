@@ -7,7 +7,7 @@
   align-items: center;
   background-color: $nasaColor;
   color: $whiteColor;
-  height: 30vh;
+  min-height: 30vh;
   justify-content: space-between;
 
   a {
@@ -15,13 +15,13 @@
   }
 
   .info {
-    width: 40vw;
-    height: 25vh;
+    width: 100vw;
+    min-height: 25vh;
     @include flex-row;
     background-color: $nasaColor;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid $whiteColor;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
 
     img {
       @include white-border;
@@ -29,10 +29,11 @@
     }
 
     .get-rover-info {
-      height: 20vh;
+      min-height: 20vh;
       @include flex-column;
       justify-content: space-between;
       align-items: flex-start;
+      padding-left: 2rem;
 
       h1 {
         font-size: 3rem;

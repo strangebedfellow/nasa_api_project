@@ -2,7 +2,7 @@
   @include back-link;
 
   width: 100vw;
-  height: 30vh;
+  min-height: 30vh;
   background-color: $whiteColor;
   display: flex;
   flex-direction: column;
