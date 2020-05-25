@@ -1,13 +1,12 @@
 @import "../settings/mixins";
 
 .content {
-  background-color: $bgColor;  
+  background-color: $bgColor;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-
 
   a {
     text-decoration: none;
@@ -36,9 +35,10 @@
     @include flex-center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 100vw;
     height: 30vh;
-    filter: brightness(80%);
+    filter: brightness(60%);
     transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1);
     color: $whiteColor;
     font-size: 2rem;
@@ -47,9 +47,8 @@
     &:hover {
       filter: brightness(100%);
       cursor: pointer;
-      height: 50vh;
       color: $whiteColor;
-      font-size: 3rem;
+      transform: scale(1.1);
     }
   }
 
@@ -73,11 +72,15 @@
   }
 }
 
-@media (max-width: 700px) { 
-
+@media (max-width: 700px) {
   .content {
     h1 {
       font-size: 1rem;
+    }
+
+    .mars,
+    .apod {
+      filter: brightness(100%);
     }
   }
 }
