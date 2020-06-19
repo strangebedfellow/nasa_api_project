@@ -3,9 +3,11 @@
   position: relative;
   background-color: $bgColor;
   padding: 1rem;
-  border-width: 1px 1px 0 1px;
-  border-color: $whiteColor;
-  border-style: solid;
+  // border-width: 1px 1px 0 1px;
+  // border-color: $whiteColor;
+  // border-style: solid;
+  //@include white-border;
+
   text-transform: uppercase;
   text-align: center;
 

@@ -41,6 +41,10 @@
     img {
       width: 100%;
     }
+
+    iframe {
+      width: 100%;
+    }
   }
 }
 
@@ -53,6 +57,11 @@
       width: 100vw;
       font-size: 0.8rem;
       line-height: initial;
+
+      iframe {
+        width: 95%;
+        height: 70%;
+      }
     }
   }
 }

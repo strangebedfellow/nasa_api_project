@@ -6,11 +6,9 @@
   a {
     text-decoration: none;
     @include flex-column;
-    //justify-content: space-between;
   }
 
   img {
-    @include white-border;
     width: 100%;
     transition: filter 200ms ease;
 
@@ -27,13 +25,14 @@
     background-color: $nasaColor;
 
     h1 {
+      @include white-border;
       padding: 1rem;
-      color: $whiteColor;
+      color: $nasaColor;
       font-size: 1.5rem;
       font-weight: bold;
       text-transform: uppercase;
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
+      border-radius: 10px;
+      background-color: white;
     }
   }
 
@@ -49,11 +48,11 @@
   .rover {
     width: 30vw;
     @include flex-column;
+    @include white-border;
   }
 }
 
 @media (max-width: 700px) {
-
   .choose-rover {
     .choose-rover-title {
       h1 {
@@ -63,16 +62,12 @@
 
     .rovers {
       height: auto;
-    @include flex-column;
+      @include flex-column;
 
-    .rover {
-      width: 80%;
-      padding: 1rem 0 1rem 0;
+      .rover {
+        width: 80%;
+        padding: 1rem 0 1rem 0;
+      }
     }
-
-    }
-
-
   }
-
 }
