@@ -21,7 +21,7 @@ export default class GetSols extends Component {
     }
 
     componentDidMount() {
-        this.fetchSols()
+        this.fetchSols();
     }
 
     componentDidUpdate(prevProps, prevState) {

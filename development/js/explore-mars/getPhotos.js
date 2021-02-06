@@ -18,7 +18,6 @@ export default class GetPhotos extends Component {
 
     componentDidMount() {
         this.fetchPhotos();
-
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -28,16 +27,13 @@ export default class GetPhotos extends Component {
     }
 
     render() {
-
         const { photos } = this.state;
-
         if (!photos) {
             return <>
                 <h1>Loading photos...</h1>
                 <br />
             </>
         }
-
         else {
             return <>
                 <section className='get-photos'>
