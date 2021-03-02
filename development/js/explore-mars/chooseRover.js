@@ -14,6 +14,7 @@ export default class ChooseRover extends Component {
                     <h1>Choose a rover to explore</h1>
                 </div>
                 <div className='rovers'>
+                    <Rover rover='perseverance' img={curiosityImg} />
                     <Rover rover='curiosity' img={curiosityImg} />
                     <Rover rover='opportunity' img={opportunityImg} />
                     <Rover rover='spirit' img={spiritImg} />
