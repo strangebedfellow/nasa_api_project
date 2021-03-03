@@ -9,7 +9,8 @@ const getCams = {
     'REAR_HAZCAM_LEFT', 'REAR_HAZCAM_RIGHT'],
     curiosityCams: ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM', 'MAHLI', 'MARDI', 'NAVCAM'],
     camsFull: ['Front Hazard Avoidance Camera', 'Navigation Camera', 'Panoramic Camera', 'Miniature Thermal Emission Spectrometer (Mini-TES)', 'Entry, Descent, and Landing Camera', 'Rear Hazard Avoidance Camera'],
-    curiosityCamsFull: ['Front Hazard Avoidance Camera', 'Rear Hazard Avoidance Camera', 'Mast Camera', 'Chemistry and Camera Complex', 'Mars Hand Lens Imager', 'Mars Descent Imager', 'Navigation Camera'] 
+    curiosityCamsFull: ['Front Hazard Avoidance Camera', 'Rear Hazard Avoidance Camera', 'Mast Camera', 'Chemistry and Camera Complex', 'Mars Hand Lens Imager', 'Mars Descent Imager', 'Navigation Camera'], 
+    perseveranceCamsFull: ['Rover Up-Look Camera', 'Rover Down-Look Camera', 'Descent Stage Down-Look Camera', 'Parachute Up-Look Camera A', 'Parachute Up-Look Camera B', 'Navigation Camera - Left', 'Navigation Camera - Right', 'Mast Camera Zoom - Right', 'Mast Camera Zoom - Left', 'Front Hazard Avoidance Camera - Left', 'Front Hazard Avoidance Camera - Right', 'Rear Hazard Avoidance Camera - Left', 'Rear Hazard Avoidance Camera - Right'] 
 }
 
 export default class ChooseCam extends Component {
@@ -42,7 +43,7 @@ export default class ChooseCam extends Component {
         const { cameras, chosenCam, camChange } = this.state;
         const {rover} = this.props;
 
-        const fullName = (rover == 'curiosity') ? getCams.curiosityCamsFull : getCams.camsFull;
+        const fullName = (rover == 'curiosity') ? getCams.curiosityCamsFull : (rover == 'perseverance') ? getCams.perseveranceCamsFull : getCams.camsFull;
 
         return <>
             <section className='choose-cam'>
