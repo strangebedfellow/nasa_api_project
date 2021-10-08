@@ -41,7 +41,7 @@ export default class GetPhotos extends Component {
                     <ul>
                         {photos.map((e, index) => <>
                             <li key={e.id}>
-                                <p>Camera: {e.camera.full_name}</p>
+                                <p>{e.camera.full_name}</p>
                                 <p>Earth date: {e.earth_date}</p>
                                 <img src={e.img_src} />
                             </li>
