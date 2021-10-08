@@ -9,7 +9,7 @@
 App operates on two API's, provided by NASA:
 1. Astronomy Picture of the Day: get daily astronomy picture with description. You can change the date using calendar.
 
-2. Explore Mars: Browse images provided by rovers that landed on Mars (Curiosity, Opportunity, Spirit). Choose avaialable camera and select specific SOL (martian day) to receive images taken on Mars.
+2. Explore Mars: Browse images provided by rovers that landed on Mars (Perseverence (new), Curiosity, Opportunity, Spirit). Choose avaialable camera and select specific SOL (martian day) to receive images taken on Mars.
 
 ## Technologies
 Project is created with:
