@@ -14,16 +14,19 @@
   }
 
   .text1 {
-    animation: slide-in-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation-delay: 0.8s;
-    background-color: $nasaColor;
-    padding: 1rem;
-    border-radius: 10px;
-    font-size: 5rem;
-    @include white-border;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 0.3s;
+    background-color: transparent;
+    padding: 10px 50px 10px 50px;
+    //border-radius: 10px;
+    font-size: 2rem;
+    //@include white-border;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.05);
+    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.05);
 
     span {
       font-family: Arial;
+
       &:first-of-type {
         color: $whiteColor;
       }
@@ -58,6 +61,7 @@
     width: 0;
     opacity: 0;
   }
+
   50% {
     opacity: 50%;
   }
@@ -65,6 +69,16 @@
   100% {
     opacity: 1;
     width: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -77,9 +91,11 @@
   30% {
     opacity: 0;
   }
+
   60% {
     opacity: 50%;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -95,9 +111,11 @@
   30% {
     opacity: 0;
   }
+
   60% {
     opacity: 50%;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -105,7 +123,7 @@
 }
 
 
-@media (max-width: 700px) { 
+@media (max-width: 700px) {
 
   .landing-animation {
 

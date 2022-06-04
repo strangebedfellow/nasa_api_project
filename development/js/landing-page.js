@@ -40,13 +40,17 @@ class Navigation extends Component {
             <section className="content">
                 <Link to="/apod">
                     <div className="apod">
+                    <div className="scale_background">
                         <h1>astronomy picture of the day</h1>
+                        </div>
                     </div>
                 </Link>
                 <LandingAnimation />
                 <Link to="/mars">
                     <div className="mars">
+                        <div className="scale_background">
                         <h1>explore mars</h1>
+                        </div>
                     </div>
                 </Link>
             </section>

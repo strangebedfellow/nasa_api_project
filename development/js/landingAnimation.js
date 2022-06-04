@@ -16,10 +16,10 @@ export default class LandingAnimation extends Component {
             return <>
                 <div className='landing-animation'>
                     <div className='text1'>
-                        <span>NASA </span>
-                        <span>API</span>
+                        <span>CHOOSE YOUR </span>
+                        <span>DESTINY...</span>
                     </div>
-                    <hr></hr>
+                    {/* <hr></hr> */}
                     {/* <div className='text2'>
                         by Mirosław Pajor
                     </div> */}
