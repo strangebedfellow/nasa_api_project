@@ -65,7 +65,9 @@
   }
 
   .apod {
-    background-image: url("../images/apod2.jpg");
+    .scale_background {
+      background-image: url("../images/apod.jpg");
+    }
   }
 
 
@@ -80,16 +82,30 @@
     }
   }
 
-  @media (max-width: 700px) {
-    .content {
-      h1 {
-        font-size: 1rem;
-      }
 
-      .mars,
-      .apod {
+}
+
+@media (max-width: 700px) {
+  .content {
+    .apod,
+    .mars {
+      height: 40vh;
+      .scale_background {
         filter: brightness(100%);
+        background-position: left;
+
+        h1 {
+          font-size: 19px;
+        }
       }
     }
+
+    .mars {
+      .scale_background {
+      background-position: right;
+      }
+    }
+
   }
+
 }

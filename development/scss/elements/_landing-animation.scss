@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 30vh;
-  width: 70vw;
+  width: 100vw;
 
   .text1,
   .text2 {
@@ -21,7 +21,7 @@
     //border-radius: 10px;
     font-size: 2rem;
     //@include white-border;
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.05);
+     border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.05);
     border-top: 1px solid rgba($color: #ffffff, $alpha: 0.05);
 
     span {
@@ -128,9 +128,8 @@
   .landing-animation {
 
     .text1 {
-      font-size: 2rem;
+      font-size: 1rem;
+      line-height: 120%;
     }
-
-
   }
 }
