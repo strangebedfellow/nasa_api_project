@@ -4,6 +4,11 @@
   align-items: center;
   height: 30vh;
   width: 100vw;
+  background-image: url('https://cdn.theatlantic.com/thumbor/y2Y7NSqvCXh0BXGrTXn5pzHBaBg=/0x141:2781x1705/1600x900/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0px 0px 66px 33px rgba(0, 0, 0, 1);
 
   .text1,
   .text2 {
@@ -16,24 +21,28 @@
   .text1 {
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation-delay: 0.3s;
-    background-color: transparent;
-    padding: 10px 50px 10px 50px;
-    //border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgb(114, 114, 114);
+    // background-color: rgba($color: #ffffff, $alpha: 0.3);
+    padding: 50px 50px 50px 50px;
+    border-radius: 20px;
     font-size: 2rem;
     //@include white-border;
-     border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.05);
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.05);
     border-top: 1px solid rgba($color: #ffffff, $alpha: 0.05);
 
     span {
-      font-family: Arial;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 48px;
+      color: white;
 
-      &:first-of-type {
-        color: $whiteColor;
-      }
+      // &:first-of-type {
+      //   color: $whiteColor;
+      // }
 
-      &:last-of-type {
-        color: #ff0000;
-      }
+      // &:last-of-type {
+      //   color: #ff0000;
+      // }
     }
   }
 
@@ -128,8 +137,12 @@
   .landing-animation {
 
     .text1 {
-      font-size: 1rem;
-      line-height: 120%;
+      box-shadow: none;
+
+      span {
+        font-size: 1.5rem;
+        line-height: 120%;
+      }
     }
   }
 }
