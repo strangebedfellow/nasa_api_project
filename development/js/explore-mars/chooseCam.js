@@ -115,7 +115,7 @@ export default class ChooseCam extends Component {
     return (
       <>
         <section className="choose-cam">
-          <h1>{`Choose ${rover.toUpperCase()}'s camera`}</h1>
+          <h1>{`${rover.toUpperCase()}'s cameras:`}</h1>
           <div className="cameras">
             {cameras.map((cam, index) => (
               <span
