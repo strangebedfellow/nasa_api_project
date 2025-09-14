@@ -46,7 +46,7 @@ export default class GetSols extends Component {
         else {
             return <>
                 <select onChange={this.handleChange}>
-                    <option value='' hidden>Choose sol</option>
+                    <option value='' hidden>sol</option>
                     {sols.map((e, index) => <option key={index} value={e.sol}>{e.sol}</option>)}
                 </select>
                 {sol && <GetPhotos camera={cam} rover={rover} sol={sol} />}
