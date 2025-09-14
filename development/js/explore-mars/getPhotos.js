@@ -39,13 +39,13 @@ export default class GetPhotos extends Component {
                 <section className='get-photos'>
                     <ScrollUpButton />
                     <ul>
-                        {photos.map((e, index) => <>
+                        {photos.map((e, index) => (
                             <li key={e.id}>
                                 <p>{e.camera.full_name}</p>
                                 <p>Earth date: {e.earth_date}</p>
-                                <img src={e.img_src} />
+                                <img src={e.img_src} loading="lazy" alt={`Mars rover ${e.camera.full_name}`} />
                             </li>
-                        </>)}
+                        ))}
                     </ul>
                 </section>
             </>

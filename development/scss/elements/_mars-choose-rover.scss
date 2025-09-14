@@ -39,16 +39,22 @@
   .rovers {
     @include flex-row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: $nasaColor;
-    height: 60vh;
+    // height: 60vh;
     width: 100vw;
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
   }
 
   .rover {
-    width: 30vw;
+    width: 30%;
     @include flex-column;
     @include white-border;
+    border-radius: 16px;
+    overflow: hidden;
   }
 }
 
