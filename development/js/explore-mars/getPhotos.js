@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ScrollUpButton from "react-scroll-up-button";
 
 export default class GetPhotos extends Component {
     constructor(props) {
@@ -17,7 +18,6 @@ export default class GetPhotos extends Component {
 
     componentDidMount() {
         this.fetchPhotos();
-
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -27,26 +27,25 @@ export default class GetPhotos extends Component {
     }
 
     render() {
-        
-        const { photos } = this.state;       
-
+        const { photos } = this.state;
         if (!photos) {
             return <>
                 <h1>Loading photos...</h1>
-                <br/>
+                <br />
             </>
         }
-
         else {
             return <>
                 <section className='get-photos'>
+                    <ScrollUpButton />
                     <ul>
-                        {photos.map((e, index) => <>
+                        {photos.map((e, index) => (
                             <li key={e.id}>
-                                <img src={e.img_src} />
+                                <p>{e.camera.full_name}</p>
                                 <p>Earth date: {e.earth_date}</p>
+                                <img src={e.img_src} loading="lazy" alt={`Mars rover ${e.camera.full_name}`} />
                             </li>
-                        </>)}
+                        ))}
                     </ul>
                 </section>
             </>

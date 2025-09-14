@@ -6,6 +6,7 @@
 
   .title,
   .explanation-title {
+    @include white-border;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,9 +14,9 @@
     background-color: $nasaColor;
     color: white;
     padding: 10px 0 10px 0;
-    border: 2px solid white;
     text-transform: uppercase;
     font-weight: bold;
+    border-radius: 5px;
   }
 
   .title {
@@ -28,8 +29,26 @@
 
   h1 {
     font-size: 1.5rem;
-   // font-weight: bold;
+    text-align: center;
   }
 }
 
-//przenieś nad apod-media (bgcolor = nasacolor) zostaw red linie poziomą oddzielajaca date component
+@media (max-width: 700px) {
+
+  .apod-title {
+    align-items: center;
+
+    .explanation-title {
+      display: none;
+    }
+    .title {
+      width: 100vw;
+      margin: 0;
+
+      h1 {
+        font-size: initial;
+      }
+    }
+  }
+  
+}

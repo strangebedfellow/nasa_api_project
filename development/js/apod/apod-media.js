@@ -10,20 +10,22 @@ export default class ApodMedia extends Component {
 
         let mediaType;
 
-        media_type === 'image'
-            ? mediaType = <>
-            
-            <a href={hdurl} target='_blank' title="Click for HD Image">
-            <div className='hd-image-info'>Click for HD image</div>
-                <img src={url}></img>
-            </a>
+        if (media_type === 'image') {
+            mediaType = <>
+                <a href={hdurl} target='_blank' title="Click for HD Image">
+                    <div className='hd-image-info'>Click for HD image</div>
+                    <img src={url}></img>
+                </a>
             </>
-            : mediaType = <iframe width="800" height="600" src={url} allowfullscreen="allowfullscreen" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        }
+        else {
+            mediaType = <iframe width="800" height="600" src={url} allowfullscreen="allowfullscreen" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        }
 
         return <>
-                <div className='media'>
-                    {mediaType}
-                </div>
+            <div className='media'>
+                {mediaType}
+            </div>
         </>
     }
 }

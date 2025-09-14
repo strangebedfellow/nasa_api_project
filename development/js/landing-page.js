@@ -8,39 +8,12 @@ import {
 } from 'react-router-dom';
 
 import '../scss/main.scss';
-import App from './apod/app';
+import Apod from './apod/apod';
 import ApodHeader from './apod/apod-header';
 import ExploreRover from './explore-mars/exploreRover';
 import ChooseRover from './explore-mars/chooseRover';
 import RoversHeader from './explore-mars/roversHeader';
-
-class TextAnimation extends Component {
-    state = {
-        delay: false
-    }
-
-    componentDidMount() {
-        this.intervalId = setTimeout(() => {
-            this.setState({ delay: true });
-        }, 1000);
-    }
-
-    render() {
-        if (this.state.delay) {
-            return <>
-                <div className='text-animation'>
-                    <h1 className='bracket'>{'<>'}</h1>
-                    <div className='central'>
-                        <p><span>NASA</span><span> API</span></p>
-                        <p>CL_project by Mirosław Pajor</p>
-                    </div>
-                    <h1 className='bracket'>{'</>'}</h1>
-                </div>
-            </>
-        }
-        return null
-    }
-}
+import LandingAnimation from './landingAnimation';
 
 class MarsLandingPage extends Component {
     render() {
@@ -56,7 +29,7 @@ class ApodLandingPage extends Component {
     render() {
         return <>
             <ApodHeader />
-            <App />
+            <Apod />
         </>
     }
 }
@@ -67,13 +40,17 @@ class Navigation extends Component {
             <section className="content">
                 <Link to="/apod">
                     <div className="apod">
+                    <div className="scale_background">
                         <h1>astronomy picture of the day</h1>
+                        </div>
                     </div>
                 </Link>
-                <TextAnimation />
+                <LandingAnimation />
                 <Link to="/mars">
                     <div className="mars">
+                        <div className="scale_background">
                         <h1>explore mars</h1>
+                        </div>
                     </div>
                 </Link>
             </section>

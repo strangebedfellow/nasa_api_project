@@ -2,29 +2,59 @@
   @include back-link;
 
   width: 100vw;
-  height: 30vh;
+  min-height: 30vh;
   background-color: $whiteColor;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 30px solid $whiteColor;
+  border-bottom: 1px solid $whiteColor;
 
   img {
     height: 15vh;
   }
 
   h1 {
-    color: $bgColor;
+    color: $whiteColor;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
-    // padding-bottom: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
   }
 }
 
 .mars-header {
-  // background-image: url("../images/mars.jpg");
-  // background-size: cover;
-  //   background-repeat: no-repeat;
+  background-image: url("../images/mars.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.apod-header {
+  background-image: url("../images/apod2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 700px) {
+  // html {
+  //   font-size: 8px;
+  // }
+
+  .header {
+    height: auto;
+    h1 {
+      font-size: initial;
+    }
+  }
+
+  .apod-header {
+    background-size: cover;
+  }
+
+  .apod-title {
+    flex-direction: column;
+  }
 }

@@ -6,9 +6,15 @@ import {
     Link,
 } from 'react-router-dom';
 
+import curiosityRoverImg from "../../images/cur.png";
+import perseveranceRoverImg from "../../images/pers.png";
+import spiritRoverImg from "../../images/spirit_rover.jpg";
+
 export default class RoverInfo extends Component {
     render() {
         const { roverId } = this.props;
+
+        const roverImg = (roverId == 'curiosity') ? curiosityRoverImg : perseveranceRoverImg;
         
         return <>
             <section className='rover-info'>
@@ -16,7 +22,7 @@ export default class RoverInfo extends Component {
                     <span>Change rover</span>
                 </Link>
                 <div className='info'>
-                    <img src={`../../images/${roverId}_rover.jpg`} />
+                    <img src={roverImg} />
                     <GetRoverInfo rover={roverId} target='roverInfo' />
                 </div>
             </section>

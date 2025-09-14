@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+// funkcja zamiast komponentu do fetchowania
 export default class GetRoverInfo extends Component {
     constructor(props) {
         super(props);
@@ -29,15 +29,15 @@ export default class GetRoverInfo extends Component {
             return null
         }
 
-        if (this.props.target) {
+        if (this.props.target == 'roverInfo') {
             return <>
                 <div className='get-rover-info'>
                     <h1>{`${this.props.rover} rover`}</h1>
                     <p>Launch date: <span>{rover.launch_date}</span></p>
                     <p>Landing date: <span>{rover.landing_date}</span></p>
                     <p>Status: {rover.status == 'active' ?
-                        <span style={{ color: "green", fontWeight: 'bold'}}>{rover.status}</span> :
-                        <span style={{ color: "red", fontWeight: 'bold'}}>{rover.status}</span>}</p>
+                        <span style={{ color: "green", fontWeight: 'bold' }}>{rover.status}</span> :
+                        <span style={{ color: "red", fontWeight: 'bold' }}>{rover.status}</span>}</p>
                     <p>Total photos: <span>{rover.total_photos}</span></p>
                 </div>
             </>
@@ -48,8 +48,8 @@ export default class GetRoverInfo extends Component {
                 <p>Launch date: <span>{rover.launch_date}</span></p>
                 <p>Landing date: <span>{rover.landing_date}</span></p>
                 <p>Status: {rover.status == 'active' ?
-                    <span style={{ color: "green", fontWeight: 'bold'}}>{rover.status}</span> :
-                    <span style={{ color: "red", fontWeight: 'bold'}}>{rover.status}</span>}</p>
+                    <span style={{ color: "green", fontSize: '1.5rem' }}>{rover.status}</span> :
+                    <span style={{ color: "red", fontSize: '1.5rem' }}>{rover.status}</span>}</p>
                 <p>Total photos: <span>{rover.total_photos}</span></p>
             </div>
         </>

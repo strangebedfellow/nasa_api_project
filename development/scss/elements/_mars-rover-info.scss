@@ -2,26 +2,39 @@
 
 .rover-info {
   @include flex-column;
-  @include back-link;
+  //@include back-link;
 
   align-items: center;
   background-color: $nasaColor;
   color: $whiteColor;
-  height: 30vh;
+  min-height: 30vh;
   justify-content: space-between;
 
   a {
-    font-size: 1.5rem;
+    
+    width: auto;
+    background-color: white;
+    color: $nasaColor;
+    transition: all 200ms ease;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 1rem;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
   }
 
   .info {
-    width: 40vw;
-    height: 25vh;
+    width: 100vw;
+    min-height: 25vh;
     @include flex-row;
     background-color: $nasaColor;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     img {
       @include white-border;
@@ -29,15 +42,52 @@
     }
 
     .get-rover-info {
-      height: 20vh;
+      min-height: 20vh;
       @include flex-column;
       justify-content: space-between;
       align-items: flex-start;
+      padding-left: 2rem;
 
       h1 {
         font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
+      }
+
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .rover-info {
+    height: auto;
+
+    .info {
+      @include flex-column;
+
+      img {
+        margin-top: 1rem;
+      }
+
+      width: 100%;
+      height: 100%;
+
+      .get-rover-info {
+        height: auto;
+        align-items: center;
+
+        p {
+          padding: 0.5rem;
+        }
+
+        h1 {
+          padding: 0.5rem;
+
+          font-size: 1.2rem;
+        }
       }
     }
   }

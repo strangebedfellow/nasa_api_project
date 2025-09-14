@@ -6,18 +6,24 @@
   background-color: $nasaColor;
   color: $whiteColor;
   height: 100%;
+  border-bottom: 1px solid white;
 
   .cameras {
     align-items: flex-start;
-    width: 40vw;
+    justify-content: center;
+    width: 50vw;
     padding: 1rem 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   h1 {
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2rem;
-    padding: 0.5rem;
+    // text-transform: uppercase;
+    font-size: 22px;
+    padding: 32px;
+    text-align: left;
   }
 
   ul {
@@ -44,5 +50,30 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .choose-cam {
+
+    h1 {
+      padding-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .cameras {
+      
+      width: 90%;
+      font-size: 0.8rem;
+
+      li {
+        text-align: center;
+      }
+
+    }
+
+    select {
+      width: 90%;
+      font-size: 1rem;
+    }
   }
 }

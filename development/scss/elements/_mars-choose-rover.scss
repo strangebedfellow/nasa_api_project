@@ -1,29 +1,14 @@
 @import "../settings/mixins";
 
-.choose-rover-title {
-  @include flex-row;
-  @include flex-center;
-  height: 10vh;
-  //border-bottom: 1px solid $whiteColor;
-  background-color: $nasaColor;
-
-  h1 {
-    color: $whiteColor;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-}
-
 .choose-rover {
-  
+  min-height: 70vh;
+
   a {
     text-decoration: none;
     @include flex-column;
   }
 
   img {
-    @include white-border;
     width: 100%;
     transition: filter 200ms ease;
 
@@ -32,17 +17,63 @@
     }
   }
 
+  .choose-rover-title {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: $nasaColor;
+
+    h1 {
+      @include white-border;
+      padding: 1rem;
+      color: $nasaColor;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 10px;
+      background-color: white;
+    }
+  }
+
   .rovers {
     @include flex-row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: $nasaColor;
-    height: 60vh;
+    // height: 60vh;
     width: 100vw;
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
   }
 
   .rover {
-    width: 30vw;
+    width: 30%;
     @include flex-column;
+    @include white-border;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 700px) {
+  .choose-rover {
+    .choose-rover-title {
+      h1 {
+        font-size: initial;
+      }
+    }
+
+    .rovers {
+      height: auto;
+      @include flex-column;
+
+      .rover {
+        width: 80%;
+        margin: 1rem 0 1rem 0;
+      }
+    }
   }
 }
