@@ -69,25 +69,21 @@ export default class ChooseCam extends Component {
     this.state = {
       cameras: [],
       chosenCam: false,
-      camChange: false,
     };
   }
 
   componentDidMount() {
-    if (this.props.rover === "curiosity") {
-      this.setState({ cameras: getCams.curiosityCams, chosenCam: false });
-    }
-    if (this.props.rover === "perseverance") {
-      this.setState({ cameras: getCams.perseveranceCams, chosenCam: false });
-    } else {
-      this.setState({ cameras: getCams.cams });
-    }
+    const roverCams = {
+      curiosity: getCams.curiosityCams,
+      perseverance: getCams.perseveranceCams,
+    };
+    const cameras = roverCams[this.props.rover] || getCams.cams;
+    this.setState({ cameras, chosenCam: false });
   }
 
   handleChange = (e) => {
     this.setState({
       chosenCam: e.target.value,
-      camChange: !this.state.camChange,
     });
   };
 
@@ -97,12 +93,11 @@ export default class ChooseCam extends Component {
     }, 200);
     this.setState({
       chosenCam: id,
-      camChange: !this.state.camChange,
     });
   };
 
   render() {
-    const { cameras, chosenCam, camChange } = this.state;
+    const { cameras, chosenCam } = this.state;
     const { rover } = this.props;
 
     const fullName =
